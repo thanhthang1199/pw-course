@@ -1,0 +1,70 @@
+## Liệt kê file theo từng vùng sau mỗi lệnh
+
+Thực hiện lần lượt các bước sau trong một folder mới:
+
+---
+
+a. Tạo 3 file: file1, file2, file3
+
+  - Local:             file1, file2, file3
+  - Working Directory: (chưa có - chưa git init)
+  - Staging Area:      (chưa có)
+  - Repository:        (chưa có)
+
+---
+
+b. git init
+
+  - Local:             (trống)
+  - Working Directory: file1, file2, file3  ← tất cả file chuyển sang đây
+  - Staging Area:      (trống)
+  - Repository:        (trống)
+
+---
+
+c. git commit -m"init project"
+
+  ⚠️ BẪY: Staging Area đang trống, chưa git add gì cả
+  => Lệnh commit THẤT BẠI, không có gì được lưu vào Repository
+
+  - Local:             (trống)
+  - Working Directory: file1, file2, file3
+  - Staging Area:      (trống)
+  - Repository:        (trống)  ← không thay đổi
+
+---
+
+d. git add file1
+
+  - Local:             (trống)
+  - Working Directory: file1, file2, file3
+  - Staging Area:      file1
+  - Repository:        (trống)
+
+---
+
+e. git commit -m"add file1"
+
+  - Local:             (trống)
+  - Working Directory: file1, file2, file3
+  - Staging Area:      (trống - đã commit xong)
+  - Repository:        file1  ← chỉ có file1 được lưu
+
+---
+
+f. git commit -m"add file"
+
+  ⚠️ BẪY: Staging Area đang trống, không có gì được add sau bước e
+  => Lệnh commit THẤT BẠI, Repository không thay đổi
+
+  - Local:             (trống)
+  - Working Directory: file1, file2, file3
+  - Staging Area:      (trống)
+  - Repository:        file1  ← vẫn chỉ có file1, file2 và file3 chưa được commit
+
+---
+
+## Kết luận
+- Phải git add trước, rồi mới git commit - nếu không có gì trong Staging Area thì commit sẽ thất bại.
+- git add <file> chỉ thêm đúng file đó, các file còn lại vẫn ở Working Directory.
+- Repository chỉ lưu những gì đã đi qua Staging Area.

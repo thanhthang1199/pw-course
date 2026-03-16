@@ -1,0 +1,25 @@
+## Giải thích các lệnh Git
+
+1. git init
+   - Khởi tạo một Git repository mới trong thư mục hiện tại.
+   - Lệnh này tạo ra thư mục ẩn ".git" để Git lưu trữ toàn bộ lịch sử và cấu hình.
+   - Sau khi chạy lệnh này, thư mục trở thành một Git repository và các file sẽ nằm ở vùng "working directory".
+   - Chỉ cần chạy một lần duy nhất cho mỗi project.
+
+2. git add <file_name>
+   - Thêm một file cụ thể từ working directory vào staging area.
+   - Ví dụ: "git add index.html" chỉ thêm file index.html vào staging area.
+   - File ở staging area đã được đánh dấu sẵn sàng để commit, nhưng chưa được lưu vào repository.
+   - Cho phép bạn chọn lọc chính xác file nào sẽ được đưa vào commit tiếp theo.
+
+3. git add .
+   - Thêm TẤT CẢ các file đã thay đổi trong thư mục hiện tại vào staging area.
+   - Dấu "." đại diện cho "thư mục hiện tại" trong Unix/Linux/Windows.
+   - Tiện lợi khi muốn commit nhiều file cùng lúc mà không cần liệt kê từng file.
+   - Cẩn thận: có thể vô tình thêm các file không mong muốn (như file cấu hình cá nhân, file tạm...).
+
+4. git commit -m "message"
+   - Lưu snapshot của tất cả file trong staging area vào repository.
+   - Flag "-m" cho phép viết commit message trực tiếp trên dòng lệnh.
+   - "message" nên mô tả ngắn gọn, rõ ràng những thay đổi bạn đã làm (ví dụ: "Add login feature").
+   - Sau khi commit, staging area được làm sạch và thay đổi được lưu vĩnh viễn vào lịch sử Git.
