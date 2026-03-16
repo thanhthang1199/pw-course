@@ -1,6 +1,7 @@
 ## Liệt kê file theo từng vùng sau mỗi lệnh
 
-Thực hiện lần lượt các bước sau trong một folder mới:
+Trong một folder mới được tạo ra, mình thực hiện lần lượt các lệnh sau.
+Hãy liệt kê các file theo từng vùng sau khi thao tác một loạt các lệnh sau:
 
 ---
 
