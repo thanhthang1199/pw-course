@@ -1,0 +1,65 @@
+a: Tạo 3 file: file1, file2, file3
+- Local: file1, file2, file3
+- Working Directory:
+- Staging:
+- Repository:
+- Commits:
+
+b: Chạy lệnh: git init
+- Local:
+- Working Directory: file1, file2, file3
+- Staging:
+- Repository:
+- Commits:
+
+c: Chạy lệnh: git commit -m"init project"
+*** BẪY: Staging Area trống, chưa git add gì -> commit THẤT BẠI ***
+- Local:
+- Working Directory: file1, file2, file3
+- Staging:
+- Repository:
+- Commits: (không có)
+
+d: Chạy lệnh: git add file1
+- Local:
+- Working Directory: file1, file2, file3
+- Staging: file1
+- Repository:
+- Commits: (không có)
+
+e: Chạy lệnh: git commit -m"add file"
+- Local:
+- Working Directory: file1, file2, file3
+- Staging:
+- Repository: file1
+- Commits: "add file"
+
+f: Chạy lệnh: git add .
+- Local:
+- Working Directory: file1, file2, file3
+- Staging: file2, file3
+- Repository: file1
+- Commits: "add file"
+
+g: Chạy lệnh: git restore --staged file2
+- Local:
+- Working Directory: file1, file2, file3
+- Staging: file3
+- Repository: file1
+- Commits: "add file"
+
+h: Chạy lệnh: git commit -m"add all files"
+*** Lưu ý: tên commit "add all files" nhưng thực ra chỉ commit file3, file2 không có trong staging ***
+- Local:
+- Working Directory: file1, file2, file3
+- Staging:
+- Repository: file1, file3
+- Commits: "add file" -> "add all files"
+
+i: Chạy lệnh: git reset HEAD~1
+- Hoàn tác commit "add all files", file3 quay về Working Directory (unstaged)
+- Local:
+- Working Directory: file1, file2, file3
+- Staging:
+- Repository: file1
+- Commits: "add file"

@@ -1,0 +1,28 @@
+1. git commit --amend
+- Sửa commit cuối cùng: thay đổi cả nội dung (file) lẫn message
+- Dùng khi: vừa commit xong nhưng quên add file, hoặc muốn sửa cả message lẫn nội dung
+- Cách dùng:
+  git add <file_bị_quên>
+  git commit --amend
+  -> Mở editor để sửa message, sau đó lưu lại
+
+2. git commit --amend -m"<message>"
+- Chỉ sửa message của commit cuối, không thay đổi nội dung
+- Dùng khi: commit xong nhưng viết sai message
+- Cách dùng:
+  git commit --amend -m"message mới"
+
+3. git restore --staged <file>
+- Đưa file từ Staging Area về lại Working Directory (bỏ staged)
+- Dùng khi: đã git add nhầm file, muốn bỏ ra khỏi staging area
+- Cách dùng:
+  git restore --staged file1.txt
+- Lưu ý: file vẫn còn trong Working Directory, chỉ bỏ khỏi Staging Area
+
+4. git reset HEAD~1
+- Hoàn tác commit cuối cùng, giữ lại thay đổi ở Working Directory
+- Dùng khi: commit nhầm, muốn "uncommit" nhưng không mất code
+- Cách dùng:
+  git reset HEAD~1
+- Lưu ý: commit đầu tiên không thể reset bằng lệnh này
+  -> Muốn xóa hoàn toàn: xóa thư mục .git rồi git init lại
