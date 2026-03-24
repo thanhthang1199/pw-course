@@ -1,0 +1,64 @@
+Câu 1: Cấu trúc DOM cơ bản của một trang web bao gồm các thẻ gì?
+---------------------------------------------------------------
+Cấu trúc DOM cơ bản của một trang web bao gồm:
+
+html
+├── head
+│   ├── <meta>      - Metadata (charset, viewport, description...)
+│   ├── <title>     - Tiêu đề hiển thị trên tab trình duyệt
+│   └── <link>      - Liên kết CSS, favicon
+└── body
+    ├── <header>    - Phần đầu trang (logo, nav)
+    ├── <nav>       - Menu điều hướng
+    ├── <main>      - Nội dung chính
+    │   ├── <section>  - Phân vùng nội dung
+    │   ├── <article>  - Bài viết độc lập
+    │   └── <div>      - Container chung
+    ├── <footer>    - Phần cuối trang
+    └── <script>    - JavaScript
+
+Các thẻ cơ bản nhất bắt buộc có:
+- <html>  : Gốc của toàn bộ trang
+- <head>  : Chứa thông tin metadata (không hiển thị trên trang)
+- <body>  : Chứa toàn bộ nội dung hiển thị cho người dùng
+
+
+Câu 2: Hãy mô tả cấu trúc HTML của 1 bảng (table)
+---------------------------------------------------
+Một bảng HTML có cấu trúc như sau:
+
+<table>
+  <thead>                        <!-- Phần tiêu đề bảng -->
+    <tr>                         <!-- Table Row: 1 hàng -->
+      <th>Tên</th>               <!-- Table Header: ô tiêu đề (in đậm, căn giữa) -->
+      <th>Tuổi</th>
+      <th>Thành phố</th>
+    </tr>
+  </thead>
+  <tbody>                        <!-- Phần thân bảng (dữ liệu) -->
+    <tr>
+      <td>Thắng</td>             <!-- Table Data: ô dữ liệu thông thường -->
+      <td>25</td>
+      <td>Hà Nội</td>
+    </tr>
+    <tr>
+      <td>Mario</td>
+      <td>30</td>
+      <td>TP.HCM</td>
+    </tr>
+  </tbody>
+  <tfoot>                        <!-- Phần chân bảng (tổng kết) -->
+    <tr>
+      <td colspan="3">Tổng: 2 người</td>
+    </tr>
+  </tfoot>
+</table>
+
+Giải thích các thẻ:
+- <table>  : Bao ngoài toàn bộ bảng
+- <thead>  : Nhóm hàng tiêu đề
+- <tbody>  : Nhóm các hàng dữ liệu
+- <tfoot>  : Nhóm hàng tổng kết (footer của bảng)
+- <tr>     : Một hàng trong bảng (Table Row)
+- <th>     : Ô tiêu đề (Table Header) - mặc định in đậm và căn giữa
+- <td>     : Ô dữ liệu (Table Data) - nội dung thông thường
